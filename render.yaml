@@ -1,0 +1,40 @@
+services:
+  # ------------------------------------
+  # 1. BACKEND (Python / FastAPI)
+  # ------------------------------------
+  - type: web
+    name: gest-backend
+    env: docker
+    plan: free # Capa gratuita
+    rootDir: ./backend
+    dockerContext: ./backend
+    # Render inyecta la variable PORT, pero uvicorn en Dockerfile corre en 8000.
+    # Configuramos para que Render sepa que el contenedor escucha en 8000.
+    envVars:
+      - key: PORT
+        value: 8000
+    # Opcional: Si quisieras usar una DB externa en el futuro
+    # - key: DATABASE_URL
+    #   value: postgres://...
+
+  # ------------------------------------
+  # 2. FRONTEND (React / Vite)
+  # ------------------------------------
+  - type: static
+    name: gest-frontend
+    env: static
+    plan: free # Capa gratuita
+    rootDir: ./frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    # Rutas para SPA (Single Page Application)
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: gest-backend
+          property: url
