@@ -33,7 +33,7 @@
 
 <!-- Table of Contents -->
 <details>
-  <summary><strong>📝 Tabla de Contenidos</strong></summary>
+  <summary><strong> Tabla de Contenidos</strong></summary>
   <ol>
     <li>
       <a href="#-sobre-el-proyecto">Sobre el Proyecto</a>
@@ -71,7 +71,7 @@
 *   ** Rendimiento Optimizado**: Frontend compilado con Vite para cargas instantáneas.
 *   ** Docker Native**: Entorno de desarrollo idéntico a producción.
 
-### 🛠️ Stack Tecnológico
+###  Stack Tecnológico
 
 | Componente | Tecnología | Descripción |
 | :--- | :--- | :--- |
@@ -82,7 +82,7 @@
 | **Database** | ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat&logo=sqlite&logoColor=white) | Base de datos ligera (Dev). |
 | **DevOps** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white) | Orquestación de contenedores. |
 
-### 📐 Arquitectura
+###  Arquitectura
 
 El proyecto sigue una arquitectura de cliente-servidor desacoplada:
 
