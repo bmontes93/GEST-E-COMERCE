@@ -14,15 +14,12 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json", lifespan=lifespan)
 
 # --- CORS Configuration ---
-origins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "*" 
-]
-
+# --- CORS Configuration ---
+# Allow all origins effectively with credentials support
+# In production, you would list specific domains: ["https://gest-frontend.onrender.com"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origin_regex=".*", # Allows all origins while supporting credentials
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
