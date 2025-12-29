@@ -1,6 +1,28 @@
+<div align="center">
+
 # GEST E-COMMERCE
 
-Plataforma moderna de comercio electrónico y gestión, construida con una arquitectura de microservicios utilizando React (Vite) para el frontend y Python (FastAPI/Django) para el backend, todo contenedorizado con Docker.
+### Plataforma moderna de comercio electrónico y gestión
+
+[![React](https://img.shields.io/badge/Frontend-React_18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Build-Vite-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Python](https://img.shields.io/badge/Backend-Python_3.10+-3776AB?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+<br />
+
+_Plataforma Fullstack de alto rendimiento diseñada para la gestión integral de comercio electrónico._
+
+[Características](#-características-principales) •
+[Instalación](#-instalación-y-despliegue) •
+[Uso](#-acceder-a-la-aplicación) •
+[Stack](#-stack-tecnológico) •
+[Contribuir](#-contribuir)
+
+</div>
+
+---
 
 ## 🚀 Características Principales
 
@@ -63,4 +85,7 @@ GEST-E-COMERCE/
 5. Abre un Pull Request.
 
 ---
-Desarrollado con ❤️ por el equipo de GEST.
+
+<div align="center">
+    Desarrollado con ❤️ por el equipo de GEST.
+</div>
