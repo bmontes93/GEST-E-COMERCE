@@ -59,17 +59,17 @@
 
 ---
 
-## 📖 Sobre el Proyecto
+##  Sobre el Proyecto
 
 **GEST E-COMMERCE** nace con el objetivo de proporcionar una infraestructura sólida para negocios digitales. A diferencia de las soluciones monolíticas tradicionales, GEST apuesta por una separación clara de responsabilidades, garantizando mantenibilidad y escalabilidad.
 
-### ✨ Características Clave
+###  Características Clave
 
-*   **🛒 E-commerce Fullstack**: Catálogo, carrito de compras y pasarela de pago (simulada/integrada).
-*   **📊 Dashboard Administrativo**: Gestión de productos, usuarios y métricas en tiempo real.
-*   **🔐 Autenticación Segura**: Sistema robusto de gestión de usuarios y roles.
-*   **⚡ Rendimiento Optimizado**: Frontend compilado con Vite para cargas instantáneas.
-*   **🐳 Docker Native**: Entorno de desarrollo idéntico a producción.
+*   ** E-commerce Fullstack**: Catálogo, carrito de compras y pasarela de pago (simulada/integrada).
+*   ** Dashboard Administrativo**: Gestión de productos, usuarios y métricas en tiempo real.
+*   ** Autenticación Segura**: Sistema robusto de gestión de usuarios y roles.
+*   ** Rendimiento Optimizado**: Frontend compilado con Vite para cargas instantáneas.
+*   ** Docker Native**: Entorno de desarrollo idéntico a producción.
 
 ### 🛠️ Stack Tecnológico
 
@@ -94,7 +94,7 @@ graph LR
 
 ---
 
-## 🚀 Comenzando
+##  Comenzando
 
 Sigue estos pasos para levantar una copia local del proyecto.
 
@@ -136,7 +136,7 @@ DATABASE_URL=sqlite:///database.db
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [x] Configuración inicial del proyecto y Dockerización.
 - [x] Estructura base Frontend y Backend.
@@ -149,7 +149,7 @@ Consulta los [issues abiertos](https://github.com/bmontes93/GEST-E-COMERCE/issue
 
 ---
 
-## 🤝 Contribuyendo
+##  Contribuyendo
 
 Las contribuciones son lo que hacen a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas es **muy apreciada**.
 
@@ -161,7 +161,7 @@ Las contribuciones son lo que hacen a la comunidad de código abierto un lugar i
 
 ---
 
-## 👤 Autor
+##  Autor
 
 **Desarrollado por [bmontes93](https://github.com/bmontes93)**
 
