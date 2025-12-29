@@ -1,0 +1,91 @@
+from app.schemas.pack import Pack
+
+MOCK_PACKS = [
+  {
+    "id": 1,
+    "businessName": "Panadería El Trigal",
+    "distance": "0.2 km",
+    "originalPrice": "S/ 35.00",
+    "discountedPrice": "S/ 14.00",
+    "timeLeft": "21:00",
+    "tags": ["Panadería", "Vegetariano"],
+    "imageUrl": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 3,
+    "lat": -9.5257,
+    "lng": -77.5267,
+    "description": "Surtido de panes artesanales del día y bollería dulce.",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "businessName": "Green Life Salad Bar",
+    "distance": "0.8 km",
+    "originalPrice": "S/ 45.00",
+    "discountedPrice": "S/ 18.00",
+    "timeLeft": "20:30",
+    "tags": ["Vegano", "Saludable"],
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 12,
+    "lat": -9.5307,
+    "lng": -77.5257,
+    "description": "Ensaladas frescas y wraps preparados hoy.",
+    "rating": 4.9
+  },
+  {
+    "id": 3,
+    "businessName": "Pizzería La Roma",
+    "distance": "1.5 km",
+    "originalPrice": "S/ 50.00",
+    "discountedPrice": "S/ 22.00",
+    "timeLeft": "23:00",
+    "tags": ["Pizzería", "Cena"],
+    "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 1,
+    "lat": -9.5267,
+    "lng": -77.5317,
+    "description": "Porciones de pizza gourmet y palitos de ajo.",
+    "rating": 4.5
+  },
+  {
+    "id": 4,
+    "businessName": "Pastelería Dulce Pecado",
+    "distance": "2.1 km",
+    "originalPrice": "S/ 40.00",
+    "discountedPrice": "S/ 15.00",
+    "timeLeft": "19:00",
+    "tags": ["Postres", "Dulces"],
+    "imageUrl": "https://images.unsplash.com/photo-1559304822-9eb2813c9844?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 6,
+    "lat": -9.5287,
+    "lng": -77.5297,
+    "rating": 4.7
+  },
+  {
+    "id": 5,
+    "businessName": "Sushi Zen",
+    "distance": "3.5 km",
+    "originalPrice": "S/ 60.00",
+    "discountedPrice": "S/ 25.00",
+    "timeLeft": "22:30",
+    "tags": ["Sushi", "Asiático"],
+    "imageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 2,
+    "lat": -9.5247,
+    "lng": -77.5287,
+    "rating": 4.6
+  },
+  {
+    "id": 6,
+    "businessName": "Frutería Fresca",
+    "distance": "0.5 km",
+    "originalPrice": "S/ 25.00",
+    "discountedPrice": "S/ 10.00",
+    "timeLeft": "18:00",
+    "tags": ["Frutas", "Orgánico"],
+    "imageUrl": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80",
+    "itemsLeft": 8,
+    "lat": -9.5297,
+    "lng": -77.5247,
+    "rating": 4.9
+  }
+]
