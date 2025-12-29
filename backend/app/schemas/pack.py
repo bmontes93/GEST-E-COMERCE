@@ -15,3 +15,6 @@ class Pack(BaseModel):
     lng: Optional[float] = None
     description: Optional[str] = "Una caja sorpresa llena de deliciosos productos rescatados."
     rating: Optional[float] = 4.5
+
+    class Config:
+        from_attributes = True

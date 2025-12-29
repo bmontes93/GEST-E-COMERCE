@@ -6,7 +6,9 @@ from app.core.db import get_session
 
 router = APIRouter()
 
-@router.get("/", response_model=List[Pack])
+from app.schemas.pack import Pack as PackSchema
+
+@router.get("/", response_model=List[PackSchema])
 def get_packs(session: Session = Depends(get_session)):
     """
     Retrieve all available surprise packs from the database.
