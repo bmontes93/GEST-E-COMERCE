@@ -24,26 +24,26 @@ _Plataforma Fullstack de alto rendimiento diseñada para la gestión integral de
 
 ---
 
-## 🚀 Características Principales
+##  Características Principales
 
 - **Frontend Moderno/Reactivo**: Construido con React y Vite para una experiencia de usuario rápida y fluida.
 - **Backend Robusto**: API potente basada en Python.
 - **Contenedorización**: Despliegue simplificado y consistente mediante Docker y Docker Compose.
 - **Base de Datos Persistente**: Configuración lista para persistencia de datos.
 
-## 🛠️ Stack Tecnológico
+##  Stack Tecnológico
 
 - **Frontend**: React, Vite, TailwindCSS (inferido por configuración).
 - **Backend**: Python (Django/FastAPI), SQL database.
 - **Infraestructura**: Docker, Docker Compose.
 
-## 📋 Requisitos Previos
+##  Requisitos Previos
 
 Asegúrate de tener instalados:
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-## ⚡ Instalación y Despliegue
+##  Instalación y Despliegue
 
 1. **Clonar el repositorio:**
 
@@ -65,7 +65,7 @@ Asegúrate de tener instalados:
    - **Frontend**: [http://localhost:5173](http://localhost:5173) (o el puerto configurado en mapeo 80).
    - **Backend API**: [http://localhost:8000](http://localhost:8000)
 
-## 📂 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 GEST-E-COMERCE/
@@ -76,7 +76,7 @@ GEST-E-COMERCE/
 └── .gitignore          # Configuración de exclusión de Git
 ```
 
-## 🤝 Contribuir
+##  Contribuir
 
 1. Haz un Fork del proyecto.
 2. Crea tu rama de funcionalidad (`git checkout -b feature/AmazingFeature`).
@@ -86,6 +86,4 @@ GEST-E-COMERCE/
 
 ---
 
-<div align="center">
-    Desarrollado con ❤️ por el equipo de GEST.
-</div>
+
