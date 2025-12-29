@@ -1,12 +1,39 @@
-import { api } from '../lib/api'; // Ensure this key import exists
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import SurprisePackCard from '../components/SurprisePackCard';
+import { Sparkles, ChevronRight, Zap, Target } from 'lucide-react';
+import { Button } from '../components/ui/Button';
+import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
+import { api } from '../lib/api';
 
-// ... inside Home component ...
-    useEffect(() => {
+interface Pack {
+  id: number;
+  businessName: string;
+  distance: string;
+  originalPrice: string;
+  discountedPrice: string;
+  timeLeft: string;
+  tags: string[];
+  imageUrl: string;
+  itemsLeft: number;
+}
+
+const FILTER_CHIPS = ["Todos", "Panadería", "Cerca de mí", "Vegano", "Cena", "Postres"];
+
+const Home: React.FC = () => {
+  const [packs, setPacks] = useState<Pack[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const [activeFilter, setActiveFilter] = useState("Todos");
+
+  useEffect(() => {
     const fetchPacks = async () => {
       try {
         setLoading(true);
-        // Using the api utility which respects VITE_API_URL
+        // CHANGE: Use api client instead of hardcoded fetch
         const data = await api.get<Pack[]>('/api/packs');
+        
         setPacks(data);
       } catch (err) {
         console.error("Failed to fetch packs:", err);
