@@ -7,7 +7,10 @@ import json
 router = APIRouter()
 
 @router.post("/seed")
-def seed_database(session: Session = Depends(get_session)):
+def seed_endpoint(session: Session = Depends(get_session)):
+    return seed_data(session)
+
+def seed_data(session: Session):
     # 1. Clear existing data
     session.exec(delete(Pack))
     session.exec(delete(User))

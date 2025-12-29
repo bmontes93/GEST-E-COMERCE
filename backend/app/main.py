@@ -3,12 +3,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.core.config import settings
 from app.api.api import api_router
-from app.core.db import create_db_and_tables
+from sqlmodel import Session, select
+from app.core.db import create_db_and_tables, engine
 from app.models import User, Pack, Reservation # Necessary for SQLModel to discover tables
+from app.api.endpoints.seed import seed_data
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     create_db_and_tables()
+    
+    # Auto-seed logic for production robustness
+    with Session(engine) as session:
+        user = session.exec(select(User)).first()
+        if not user:
+            print("🌱 Database is empty. Seeding initial data...")
+            seed_data(session)
+            print("✅ Database seeded successfully!")
+            
     yield
 
 app = FastAPI(title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json", lifespan=lifespan)
