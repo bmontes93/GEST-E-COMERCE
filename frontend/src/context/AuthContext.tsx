@@ -15,6 +15,7 @@ interface AuthContextType {
   role: UserRole;
   user: User | null;
   login: (email: string, pass: string) => Promise<User>;
+  socialLogin: (provider: string, email: string, name: string, social_id: string, avatarUrl?: string) => Promise<User>;
   logout: () => void;
   isLoading: boolean;
 }
@@ -64,6 +65,34 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const socialLogin = async (provider: string, email: string, name: string, social_id: string, avatarUrl?: string) => {
+      try {
+          const data = await api.post<User>('/api/auth/social-login', { 
+              provider, 
+              email, 
+              name, 
+              social_id,
+              avatarUrl
+          });
+
+          const loggedUser: User = {
+              id: data.id,
+              email: data.email,
+              name: data.name,
+              role: data.role as UserRole,
+              businessName: data.businessName
+          };
+
+          setUser(loggedUser);
+          setRole(loggedUser.role);
+          localStorage.setItem('gest_user', JSON.stringify(loggedUser));
+          return loggedUser;
+      } catch (error) {
+          console.error("Social Login error:", error);
+          throw error;
+      }
+  };
+
   const logout = () => {
       setUser(null);
       setRole('client');
@@ -72,7 +101,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ role, user, login, logout, isLoading }}>
+    <AuthContext.Provider value={{ role, user, login, socialLogin, logout, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

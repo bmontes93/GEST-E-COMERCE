@@ -17,8 +17,8 @@ def seed_data(session: Session):
     session.commit()
 
     # 2. Setup Base Users
-    admin = User(email="admin@gest.com", password="123", role="admin", name="Admin Gest")
-    client = User(email="cliente@gest.com", password="123", role="client", name="Cliente Nuevo")
+    admin = User(email="admin@gest.com", password="123", role="admin", name="Admin Gest", city="Huaraz", region="Ancash")
+    client = User(email="cliente@gest.com", password="123", role="client", name="Cliente Nuevo", city="Huaraz", region="Ancash")
     session.add(admin)
     session.add(client)
     session.commit()
@@ -59,7 +59,7 @@ def seed_data(session: Session):
     for i, (email, biz_name, category, img, tags, orig, disc) in enumerate(providers_data):
         # Create Provider User
         # Use biz_name for both name and businessName for simplicity
-        user = User(email=email, password="123", role="provider", name=biz_name, businessName=biz_name)
+        user = User(email=email, password="123", role="provider", name=biz_name, businessName=biz_name, city="Huaraz", region="Ancash")
         session.add(user)
         session.commit() # Get ID
         session.refresh(user)
@@ -81,7 +81,10 @@ def seed_data(session: Session):
             lat=lat,
             lng=lng,
             description=f"Caja sorpresa deliciosa de {category}. ¡Salva comida de calidad!",
-            rating=4.2 + ((i % 8) / 10.0)
+            description=f"Caja sorpresa deliciosa de {category}. ¡Salva comida de calidad!",
+            rating=4.2 + ((i % 8) / 10.0),
+            city="Huaraz",
+            region="Ancash"
         )
         session.add(pack)
     

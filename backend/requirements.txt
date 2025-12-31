@@ -5,3 +5,4 @@ pytest
 httpx
 passlib[argon2]
 sqlmodel
+psycopg2-binary

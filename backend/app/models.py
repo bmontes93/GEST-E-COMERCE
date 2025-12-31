@@ -9,6 +9,11 @@ class User(SQLModel, table=True):
     name: str
     businessName: Optional[str] = None # Only for providers
     avatarUrl: Optional[str] = None
+    google_id: Optional[str] = Field(default=None, index=True)
+    facebook_id: Optional[str] = Field(default=None, index=True)
+    x_id: Optional[str] = Field(default=None, index=True)
+    city: str = "Huaraz"
+    region: str = "Ancash"
 
 class Pack(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -22,6 +27,8 @@ class Pack(SQLModel, table=True):
     itemsLeft: int
     lat: Optional[float] = None
     lng: Optional[float] = None
+    city: str = "Huaraz"
+    region: str = "Ancash"
     description: Optional[str] = "Una caja sorpresa."
     rating: Optional[float] = 4.5
     

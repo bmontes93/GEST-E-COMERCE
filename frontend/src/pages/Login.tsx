@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Button } from '../components/ui/Button';
+import { SocialLoginButtons } from '../components/SocialLoginButtons';
 import { Lock, Mail, Loader2, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -139,6 +140,17 @@ const Login: React.FC = () => {
                             Iniciar Sesión
                         </Button>
                     </form>
+
+                    <div className="relative my-8">
+                        <div className="absolute inset-0 flex items-center">
+                            <span className="w-full border-t border-gray-200" />
+                        </div>
+                        <div className="relative flex justify-center text-xs uppercase">
+                            <span className="bg-surface px-2 text-text-muted">O continúa con</span>
+                        </div>
+                    </div>
+
+                    <SocialLoginButtons />
 
                      <div className="mt-8 text-center text-sm text-text-muted">
                         ¿No tienes una cuenta? {' '}
